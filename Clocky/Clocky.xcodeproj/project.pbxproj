@@ -7,22 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9873C3642AEFCB4000E776E2 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873C3632AEFCB4000E776E2 /* HomeVC.swift */; };
+		9873C3662AEFCB9100E776E2 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873C3652AEFCB9100E776E2 /* AuthManager.swift */; };
+		9873C3692AEFCD7B00E776E2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873C3682AEFCD7B00E776E2 /* TabBarController.swift */; };
+		9873C36C2AEFCDB000E776E2 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873C36B2AEFCDB000E776E2 /* WelcomeVC.swift */; };
+		9873C36E2AEFCDCF00E776E2 /* WelcomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9873C36D2AEFCDCF00E776E2 /* WelcomeStoryboard.storyboard */; };
+		9873C3702AEFCF4900E776E2 /* AuthStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9873C36F2AEFCF4900E776E2 /* AuthStoryboard.storyboard */; };
+		9873C3722AEFCF5C00E776E2 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873C3712AEFCF5C00E776E2 /* AuthVC.swift */; };
+		9873C3762AEFEBCF00E776E2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9873C3752AEFEBCF00E776E2 /* Alamofire */; };
+		9873C3792AEFF6E600E776E2 /* AuthResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873C3782AEFF6E600E776E2 /* AuthResponce.swift */; };
 		98FAA6012AE92D7600AEC16C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FAA6002AE92D7600AEC16C /* AppDelegate.swift */; };
 		98FAA6032AE92D7600AEC16C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FAA6022AE92D7600AEC16C /* SceneDelegate.swift */; };
-		98FAA6052AE92D7600AEC16C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FAA6042AE92D7600AEC16C /* ViewController.swift */; };
 		98FAA6082AE92D7600AEC16C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98FAA6062AE92D7600AEC16C /* Main.storyboard */; };
-		98FAA60B2AE92D7600AEC16C /* Clocky.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98FAA6092AE92D7600AEC16C /* Clocky.xcdatamodeld */; };
 		98FAA60D2AE92D7800AEC16C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98FAA60C2AE92D7800AEC16C /* Assets.xcassets */; };
 		98FAA6102AE92D7800AEC16C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98FAA60E2AE92D7800AEC16C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9873C3632AEFCB4000E776E2 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		9873C3652AEFCB9100E776E2 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		9873C3682AEFCD7B00E776E2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		9873C36B2AEFCDB000E776E2 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		9873C36D2AEFCDCF00E776E2 /* WelcomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeStoryboard.storyboard; sourceTree = "<group>"; };
+		9873C36F2AEFCF4900E776E2 /* AuthStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthStoryboard.storyboard; sourceTree = "<group>"; };
+		9873C3712AEFCF5C00E776E2 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
+		9873C3782AEFF6E600E776E2 /* AuthResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponce.swift; sourceTree = "<group>"; };
 		98FAA5FD2AE92D7600AEC16C /* Clocky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clocky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98FAA6002AE92D7600AEC16C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98FAA6022AE92D7600AEC16C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		98FAA6042AE92D7600AEC16C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		98FAA6072AE92D7600AEC16C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		98FAA60A2AE92D7600AEC16C /* Clocky.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Clocky.xcdatamodel; sourceTree = "<group>"; };
 		98FAA60C2AE92D7800AEC16C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98FAA60F2AE92D7800AEC16C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98FAA6112AE92D7800AEC16C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,12 +46,83 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9873C3762AEFEBCF00E776E2 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9873C35F2AEFCACE00E776E2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				98FAA60E2AE92D7800AEC16C /* LaunchScreen.storyboard */,
+				9873C36D2AEFCDCF00E776E2 /* WelcomeStoryboard.storyboard */,
+				9873C36F2AEFCF4900E776E2 /* AuthStoryboard.storyboard */,
+				98FAA6062AE92D7600AEC16C /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9873C3602AEFCAE200E776E2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9873C36A2AEFCD9C00E776E2 /* Welcome */,
+				9873C3732AEFCF6E00E776E2 /* AuthVC */,
+				9873C3622AEFCB2700E776E2 /* HomeVC */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9873C3612AEFCAEF00E776E2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9873C3652AEFCB9100E776E2 /* AuthManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		9873C3622AEFCB2700E776E2 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				9873C3672AEFCD3800E776E2 /* TabBarVC */,
+				9873C3632AEFCB4000E776E2 /* HomeVC.swift */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		9873C3672AEFCD3800E776E2 /* TabBarVC */ = {
+			isa = PBXGroup;
+			children = (
+				9873C3682AEFCD7B00E776E2 /* TabBarController.swift */,
+			);
+			path = TabBarVC;
+			sourceTree = "<group>";
+		};
+		9873C36A2AEFCD9C00E776E2 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				9873C36B2AEFCDB000E776E2 /* WelcomeVC.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		9873C3732AEFCF6E00E776E2 /* AuthVC */ = {
+			isa = PBXGroup;
+			children = (
+				9873C3712AEFCF5C00E776E2 /* AuthVC.swift */,
+			);
+			path = AuthVC;
+			sourceTree = "<group>";
+		};
+		9873C3772AEFF6DA00E776E2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9873C3782AEFF6E600E776E2 /* AuthResponce.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		98FAA5F42AE92D7600AEC16C = {
 			isa = PBXGroup;
 			children = (
@@ -58,16 +142,24 @@
 		98FAA5FF2AE92D7600AEC16C /* Clocky */ = {
 			isa = PBXGroup;
 			children = (
-				98FAA6002AE92D7600AEC16C /* AppDelegate.swift */,
-				98FAA6022AE92D7600AEC16C /* SceneDelegate.swift */,
-				98FAA6042AE92D7600AEC16C /* ViewController.swift */,
-				98FAA6062AE92D7600AEC16C /* Main.storyboard */,
-				98FAA60C2AE92D7800AEC16C /* Assets.xcassets */,
-				98FAA60E2AE92D7800AEC16C /* LaunchScreen.storyboard */,
+				9873C3772AEFF6DA00E776E2 /* Models */,
+				9873C3612AEFCAEF00E776E2 /* Managers */,
+				9873C35F2AEFCACE00E776E2 /* Views */,
+				9873C3602AEFCAE200E776E2 /* Controllers */,
+				98FAA6172AE930F000AEC16C /* App */,
 				98FAA6112AE92D7800AEC16C /* Info.plist */,
-				98FAA6092AE92D7600AEC16C /* Clocky.xcdatamodeld */,
+				98FAA60C2AE92D7800AEC16C /* Assets.xcassets */,
 			);
 			path = Clocky;
+			sourceTree = "<group>";
+		};
+		98FAA6172AE930F000AEC16C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				98FAA6002AE92D7600AEC16C /* AppDelegate.swift */,
+				98FAA6022AE92D7600AEC16C /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +178,9 @@
 			dependencies = (
 			);
 			name = Clocky;
+			packageProductDependencies = (
+				9873C3752AEFEBCF00E776E2 /* Alamofire */,
+			);
 			productName = Clocky;
 			productReference = 98FAA5FD2AE92D7600AEC16C /* Clocky.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +209,9 @@
 				Base,
 			);
 			mainGroup = 98FAA5F42AE92D7600AEC16C;
+			packageReferences = (
+				9873C3742AEFEBCF00E776E2 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 98FAA5FE2AE92D7600AEC16C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +226,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9873C36E2AEFCDCF00E776E2 /* WelcomeStoryboard.storyboard in Resources */,
+				9873C3702AEFCF4900E776E2 /* AuthStoryboard.storyboard in Resources */,
 				98FAA6102AE92D7800AEC16C /* LaunchScreen.storyboard in Resources */,
 				98FAA60D2AE92D7800AEC16C /* Assets.xcassets in Resources */,
 				98FAA6082AE92D7600AEC16C /* Main.storyboard in Resources */,
@@ -141,9 +241,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98FAA60B2AE92D7600AEC16C /* Clocky.xcdatamodeld in Sources */,
-				98FAA6052AE92D7600AEC16C /* ViewController.swift in Sources */,
+				9873C3642AEFCB4000E776E2 /* HomeVC.swift in Sources */,
+				9873C3662AEFCB9100E776E2 /* AuthManager.swift in Sources */,
 				98FAA6012AE92D7600AEC16C /* AppDelegate.swift in Sources */,
+				9873C36C2AEFCDB000E776E2 /* WelcomeVC.swift in Sources */,
+				9873C3722AEFCF5C00E776E2 /* AuthVC.swift in Sources */,
+				9873C3692AEFCD7B00E776E2 /* TabBarController.swift in Sources */,
+				9873C3792AEFF6E600E776E2 /* AuthResponce.swift in Sources */,
 				98FAA6032AE92D7600AEC16C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,7 +407,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = WelcomeStoryboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -335,7 +439,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = WelcomeStoryboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -376,18 +480,24 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCVersionGroup section */
-		98FAA6092AE92D7600AEC16C /* Clocky.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				98FAA60A2AE92D7600AEC16C /* Clocky.xcdatamodel */,
-			);
-			currentVersion = 98FAA60A2AE92D7600AEC16C /* Clocky.xcdatamodel */;
-			path = Clocky.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+/* Begin XCRemoteSwiftPackageReference section */
+		9873C3742AEFEBCF00E776E2 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
 		};
-/* End XCVersionGroup section */
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9873C3752AEFEBCF00E776E2 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9873C3742AEFEBCF00E776E2 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 98FAA5F52AE92D7600AEC16C /* Project object */;
 }
