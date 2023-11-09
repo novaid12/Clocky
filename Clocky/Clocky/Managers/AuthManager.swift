@@ -11,19 +11,19 @@ import Foundation
 final class AuthManager {
     static let shared = AuthManager()
 
+    private var refreshingToken = false
+
     enum Constants {
         static let clientID = "82cc9a8a2e8c4e28aefdceb3efdf68db"
         static let clientSecret = "98727be58f3f424ea1ffd496ee7af588"
         static let tokenAPIURL = "https://accounts.spotify.com/api/token"
         static let redirectURI = "https://www.google.com"
-        static let scopes = "user-read-private"
+        static let scopes = "user-read-private%20playlist-modify-public%20playlist-read-private%20playlist-modify-private%20user-follow-read%20user-library-modify%20user-library-read%20user-read-email"
     }
 
     private init() {}
 
     public var signInURL: URL? {
-       
-
         let base = "https://accounts.spotify.com/authorize"
         let string = "\(base)?response_type=code&client_id=\(Constants.clientID)&scope=\(Constants.scopes)&redirect_uri=\(Constants.redirectURI)&show_dialog=TRUE"
         return URL(string: string)
@@ -69,7 +69,7 @@ final class AuthManager {
         request.setValue("application/x-www-form-urlencoded ",
                          forHTTPHeaderField: "Content-Type")
         request.httpBody = components.query?.data(using: .utf8)
-        let basicToken = Constants.clientID+":"+Constants.clientSecret
+        let basicToken = Constants.clientID + ":" + Constants.clientSecret
         let data = basicToken.data(using: .utf8)
         guard let base64String = data?.base64EncodedString() else {
             print("Failure to get base64")
@@ -86,6 +86,7 @@ final class AuthManager {
             do {
                 let result = try JSONDecoder().decode(AuthResponse.self, from: data)
                 self?.cacheToken(result: result)
+
                 completion(true)
             }
             catch {
@@ -96,7 +97,30 @@ final class AuthManager {
         task.resume()
     }
 
-    public func refreshAccessToken(completion: @escaping (Bool) -> Void) {
+    private var onRefreshBlocks = [(String) -> Void]()
+
+    public func withValidToken(completion: @escaping (String) -> Void) {
+//        guard !refreshingToken else {
+//            onRefreshBlocks.append(completion)
+//            return
+//        }
+
+        if shouldRefreshToken {
+            refreshIfNeeded { [weak self] success in
+                if let token = self?.accessToken, success {
+                    print(token)
+                    completion(token)
+                }
+            }
+        }
+        else if let token = accessToken {
+            completion(token)
+        }
+    }
+
+    public func refreshIfNeeded(completion: @escaping (Bool) -> Void) {
+        guard !refreshingToken else { return }
+
         guard shouldRefreshToken else {
             completion(true)
             return
@@ -105,6 +129,8 @@ final class AuthManager {
         guard let refreshToken = refreshToken else { return }
 
         guard let url = URL(string: Constants.tokenAPIURL) else { return }
+
+        refreshingToken = true
 
         var components = URLComponents()
         components.queryItems = [
@@ -117,7 +143,7 @@ final class AuthManager {
         request.setValue("application/x-www-form-urlencoded ",
                          forHTTPHeaderField: "Content-Type")
         request.httpBody = components.query?.data(using: .utf8)
-        let basicToken = Constants.clientID+":"+Constants.clientSecret
+        let basicToken = Constants.clientID + ":" + Constants.clientSecret
         let data = basicToken.data(using: .utf8)
         guard let base64String = data?.base64EncodedString() else {
             print("Failure to get base64")
@@ -127,15 +153,19 @@ final class AuthManager {
         request.setValue("Basic \(base64String)",
                          forHTTPHeaderField: "Authorization")
         let task = URLSession.shared.dataTask(with: request) { [weak self] data, _, error in
+            self?.refreshingToken = false
             guard let data = data, error == nil else {
                 completion(false)
                 return
             }
             do {
                 let result = try JSONDecoder().decode(AuthResponse.self, from: data)
+                self?.onRefreshBlocks.forEach { $0(result.access_token) }
+                self?.onRefreshBlocks.removeAll()
                 self?.cacheToken(result: result)
                 completion(true)
             }
+
             catch {
                 print(error.localizedDescription)
                 completion(false)
@@ -151,4 +181,5 @@ final class AuthManager {
         }
         UserDefaults.standard.setValue(Date().addingTimeInterval(TimeInterval(result.expires_in)), forKey: "expirationDate")
     }
+
 }

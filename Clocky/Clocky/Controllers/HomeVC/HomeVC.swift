@@ -10,16 +10,21 @@ import UIKit
 class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
+//        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 55, width: view.frame.size.width, height: 44))
+//        
+//
+//        let navItem = UINavigationItem(title: "SomeTitle")
+//        navItem.rightBarButtonItem = UIBarButtonItem(image: UIImage (systemName: "gear"),
+//                                                     style: .done,
+//                                                     target: self,
+//                                                     action: #selector(didTapSettings))
+//     
+//
+//        navBar.setItems([navItem], animated: false)
+//        
+//        view.addSubview(navBar)
     }
-
-    /*
-     // MARK: - Navigation
-
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-     }
-     */
+    
 }

@@ -29,7 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else {
             let storyboard = UIStoryboard(name: "WelcomeStoryboard", bundle: nil)
             
-//            let welcomeVC = storyboard.instantiateViewController(withIdentifier: "WelcomeVC") as! WelcomeVC
             guard let initialViewController = storyboard.instantiateInitialViewController() else { return false }
             let navigationController = UINavigationController(rootViewController: initialViewController)
             

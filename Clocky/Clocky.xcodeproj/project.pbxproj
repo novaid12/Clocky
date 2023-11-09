@@ -16,6 +16,9 @@
 		9873C3722AEFCF5C00E776E2 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873C3712AEFCF5C00E776E2 /* AuthVC.swift */; };
 		9873C3762AEFEBCF00E776E2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9873C3752AEFEBCF00E776E2 /* Alamofire */; };
 		9873C3792AEFF6E600E776E2 /* AuthResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873C3782AEFF6E600E776E2 /* AuthResponce.swift */; };
+		98F550302AFBB4BD00EC0E1B /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F5502F2AFBB4BC00EC0E1B /* ApiCaller.swift */; };
+		98F550322AFBB57100EC0E1B /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F550312AFBB57100EC0E1B /* UserProfile.swift */; };
+		98F550352AFBBE1600EC0E1B /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F550342AFBBE1600EC0E1B /* ProfileVC.swift */; };
 		98FAA6012AE92D7600AEC16C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FAA6002AE92D7600AEC16C /* AppDelegate.swift */; };
 		98FAA6032AE92D7600AEC16C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FAA6022AE92D7600AEC16C /* SceneDelegate.swift */; };
 		98FAA6082AE92D7600AEC16C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98FAA6062AE92D7600AEC16C /* Main.storyboard */; };
@@ -32,6 +35,9 @@
 		9873C36F2AEFCF4900E776E2 /* AuthStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthStoryboard.storyboard; sourceTree = "<group>"; };
 		9873C3712AEFCF5C00E776E2 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		9873C3782AEFF6E600E776E2 /* AuthResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponce.swift; sourceTree = "<group>"; };
+		98F5502F2AFBB4BC00EC0E1B /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
+		98F550312AFBB57100EC0E1B /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		98F550342AFBBE1600EC0E1B /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		98FAA5FD2AE92D7600AEC16C /* Clocky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clocky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98FAA6002AE92D7600AEC16C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98FAA6022AE92D7600AEC16C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				9873C3652AEFCB9100E776E2 /* AuthManager.swift */,
+				98F5502F2AFBB4BC00EC0E1B /* ApiCaller.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -87,6 +94,7 @@
 			children = (
 				9873C3672AEFCD3800E776E2 /* TabBarVC */,
 				9873C3632AEFCB4000E776E2 /* HomeVC.swift */,
+				98F550342AFBBE1600EC0E1B /* ProfileVC.swift */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -119,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				9873C3782AEFF6E600E776E2 /* AuthResponce.swift */,
+				98F550312AFBB57100EC0E1B /* UserProfile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -243,11 +252,14 @@
 			files = (
 				9873C3642AEFCB4000E776E2 /* HomeVC.swift in Sources */,
 				9873C3662AEFCB9100E776E2 /* AuthManager.swift in Sources */,
+				98F550322AFBB57100EC0E1B /* UserProfile.swift in Sources */,
 				98FAA6012AE92D7600AEC16C /* AppDelegate.swift in Sources */,
 				9873C36C2AEFCDB000E776E2 /* WelcomeVC.swift in Sources */,
 				9873C3722AEFCF5C00E776E2 /* AuthVC.swift in Sources */,
 				9873C3692AEFCD7B00E776E2 /* TabBarController.swift in Sources */,
 				9873C3792AEFF6E600E776E2 /* AuthResponce.swift in Sources */,
+				98F550302AFBB4BD00EC0E1B /* ApiCaller.swift in Sources */,
+				98F550352AFBBE1600EC0E1B /* ProfileVC.swift in Sources */,
 				98FAA6032AE92D7600AEC16C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
