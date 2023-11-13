@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if AuthManager.shared.isSignedIn {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             
-            guard let initialViewController = storyboard.instantiateInitialViewController() else { return }
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
             let navigationController = UINavigationController(rootViewController: initialViewController)
             
             self.navigationController = navigationController
@@ -66,5 +66,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
 
         // Save changes in the application's managed object context when the application transitions to the background.
+    }
+    
+    deinit {
+        print("deinit SceneDelegate")
     }
 }

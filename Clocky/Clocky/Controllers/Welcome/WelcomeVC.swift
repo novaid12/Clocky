@@ -8,11 +8,6 @@
 import UIKit
 
 class WelcomeVC: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
 
     @IBAction func signInButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "AuthStoryboard", bundle: nil)
@@ -20,9 +15,11 @@ class WelcomeVC: UIViewController {
         authVC.complitionHandler = { [weak self] success in
             DispatchQueue.main.async {
                 self?.handleSignIn(success: success)
+                
             }
         }
-        navigationController?.pushViewController(authVC, animated: true)
+//        authVC.modalPresentationStyle = .fullScreen
+        present(authVC, animated: true)
     }
 
     private func handleSignIn(success: Bool) {
@@ -37,5 +34,9 @@ class WelcomeVC: UIViewController {
         let tabBar = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
         tabBar.modalPresentationStyle = .fullScreen
         present(tabBar, animated: true)
+    }
+    
+    deinit {
+        print("deinit WelcomeVC")
     }
 }

@@ -17,10 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         
         if AuthManager.shared.isSignedIn {
-            
+            AuthManager.shared.refreshIfNeeded(completion: nil)
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             
-            guard let initialViewController = storyboard.instantiateInitialViewController() else { return false }
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
             let navigationController = UINavigationController(rootViewController: initialViewController)
             
             self.navigationController = navigationController
@@ -29,17 +29,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else {
             let storyboard = UIStoryboard(name: "WelcomeStoryboard", bundle: nil)
             
-            guard let initialViewController = storyboard.instantiateInitialViewController() else { return false }
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "WelcomeVC")
             let navigationController = UINavigationController(rootViewController: initialViewController)
             
             self.navigationController = navigationController
             window.rootViewController = navigationController
-            
         }
         window.makeKeyAndVisible()
         self.window = window
 
         return true
+    }
+    
+    func switchToLoginScreen() {
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "WelcomeStoryboard", bundle: nil)
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "WelcomeVC")
+        window.rootViewController = initialViewController
+        UIApplication.shared.windows.first?.rootViewController = initialViewController
+       
+       
     }
     
     // MARK: UISceneSession Lifecycle
@@ -57,11 +66,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-        if let scheme = url.scheme,scheme.localizedCaseInsensitiveCompare("myAppClocky")  == .orderedSame {
+        if let scheme = url.scheme, scheme.localizedCaseInsensitiveCompare("myAppClocky") == .orderedSame {
             // обработайте возвращение пользователя после авторизации Spotify здесь
             
             return true
         }
         return false
+    }
+    
+    deinit {
+        print("deinit AppDelegate")
     }
 }

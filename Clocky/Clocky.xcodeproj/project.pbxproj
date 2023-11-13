@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9826CF162B026C52003942C8 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9826CF152B026C52003942C8 /* AlamofireImage */; };
 		9873C3642AEFCB4000E776E2 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873C3632AEFCB4000E776E2 /* HomeVC.swift */; };
 		9873C3662AEFCB9100E776E2 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873C3652AEFCB9100E776E2 /* AuthManager.swift */; };
 		9873C3692AEFCD7B00E776E2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873C3682AEFCD7B00E776E2 /* TabBarController.swift */; };
@@ -53,6 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9873C3762AEFEBCF00E776E2 /* Alamofire in Frameworks */,
+				9826CF162B026C52003942C8 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +191,7 @@
 			name = Clocky;
 			packageProductDependencies = (
 				9873C3752AEFEBCF00E776E2 /* Alamofire */,
+				9826CF152B026C52003942C8 /* AlamofireImage */,
 			);
 			productName = Clocky;
 			productReference = 98FAA5FD2AE92D7600AEC16C /* Clocky.app */;
@@ -220,6 +223,7 @@
 			mainGroup = 98FAA5F42AE92D7600AEC16C;
 			packageReferences = (
 				9873C3742AEFEBCF00E776E2 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				9826CF142B026C52003942C8 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = 98FAA5FE2AE92D7600AEC16C /* Products */;
 			projectDirPath = "";
@@ -493,6 +497,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9826CF142B026C52003942C8 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
+			};
+		};
 		9873C3742AEFEBCF00E776E2 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -504,6 +516,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9826CF152B026C52003942C8 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9826CF142B026C52003942C8 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
 		9873C3752AEFEBCF00E776E2 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9873C3742AEFEBCF00E776E2 /* XCRemoteSwiftPackageReference "Alamofire" */;
