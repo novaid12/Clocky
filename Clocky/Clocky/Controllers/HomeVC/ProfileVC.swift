@@ -20,6 +20,7 @@ class ProfileVC: UIViewController {
             ApiCaller.shared.getCurrentUserProfile(token: token) { [weak self] result in
                 switch result {
                 case .success(let model):
+                    print(model)
                     self?.setupUI(model: model)
                 case .failure(let error):
                     print(error)
@@ -38,11 +39,12 @@ class ProfileVC: UIViewController {
         print("deinit ProfileVC")
     }
 
-    private func setupUI(model: UserProfile) {
+    private func setupUI(model: UserProfile?) {
+        guard let model = model, let image = model.images else { return }
         email.text = model.email
         country.text = model.country
         name.text = model.display_name
-        let url = model.images[model.images.count - 1].url
+        guard image.count != 0 ,let url = image[image.count - 1].url else { return }
 
         AF.request(url).responseImage { [weak self] responce in
             switch responce.result {
