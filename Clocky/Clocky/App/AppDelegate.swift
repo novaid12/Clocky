@@ -5,13 +5,19 @@
 //  Created by  NovA on 25.10.23.
 //
 
-import CoreData
 import UIKit
+import Foundation
+import AudioToolbox
+import AVFoundation
+import UserNotifications
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var navigationController: UINavigationController?
+    private var audioPlayer: AVAudioPlayer?
+
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
@@ -25,8 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             self.navigationController = navigationController
             window.rootViewController = navigationController
-        }
-        else {
+            
+            
+        } else {
             let storyboard = UIStoryboard(name: "WelcomeStoryboard", bundle: nil)
             
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "WelcomeVC")
@@ -37,7 +44,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         window.makeKeyAndVisible()
         self.window = window
-
+        
+        let current = UNUserNotificationCenter.current()
+        current.delegate = self
+        current.requestAuthorization(options: [.badge, .alert, .sound], completionHandler: { granted, error in
+            if granted {
+                print("yes")
+            }
+            else {
+                print("no")
+            }
+        })
+        
         return true
     }
     
@@ -47,10 +65,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "WelcomeVC")
         window.rootViewController = initialViewController
         UIApplication.shared.windows.first?.rootViewController = initialViewController
-       
-       
     }
-    
+
     // MARK: UISceneSession Lifecycle
     
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -76,5 +92,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     deinit {
         print("deinit AppDelegate")
+    }
+}
+
+extension AppDelegate:UNUserNotificationCenterDelegate {
+    //app在前台也會通知
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.sound, .badge, .banner])
+    }
+    
+    //點選通知完成後會發生的事
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        completionHandler()
     }
 }
