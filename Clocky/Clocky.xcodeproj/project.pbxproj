@@ -230,8 +230,8 @@
 		98FAA6172AE930F000AEC16C /* App */ = {
 			isa = PBXGroup;
 			children = (
-				98FAA6002AE92D7600AEC16C /* AppDelegate.swift */,
 				98FAA6022AE92D7600AEC16C /* SceneDelegate.swift */,
+				98FAA6002AE92D7600AEC16C /* AppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -502,7 +502,7 @@
 				INFOPLIST_FILE = Clocky/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = WelcomeStoryboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -534,7 +534,7 @@
 				INFOPLIST_FILE = Clocky/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = WelcomeStoryboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (

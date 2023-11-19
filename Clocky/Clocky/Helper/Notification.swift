@@ -20,7 +20,7 @@ class UserNotification{
     func addNotificationRequest(alarm: AlarmInfo) {
 //        current.removeAllPendingNotificationRequests()
         content.title = "Clocky"
-        content.subtitle = "Alarm"
+        content.subtitle = "Wake up, Sleepyhead!"
         content.categoryIdentifier = "alarm"
         content.sound = UNNotificationSound(named: UNNotificationSoundName("bell.mp3"))
         

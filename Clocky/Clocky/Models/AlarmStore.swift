@@ -10,7 +10,9 @@ import Foundation
 struct AlarmStore{
     
     private let userDefault = UserDefaults.standard
+    
     var isEdit = false
+    
     private(set) var alarms:[AlarmInfo] = []{
         didSet{
             alarms.sort{ $0.date < $1.date }

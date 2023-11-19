@@ -91,7 +91,6 @@ class AddAlarmViewController: UIViewController {
         navigationItem.title = "Add Alarm"
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelButton))
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveButton))
-
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor:UIColor.white]
         navigationItem.rightBarButtonItem?.tintColor = .orange
         navigationItem.leftBarButtonItem?.tintColor = .orange

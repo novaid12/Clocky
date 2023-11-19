@@ -70,7 +70,6 @@ extension RepeatAlarmVC: UITableViewDataSource, UITableViewDelegate {
         } else {
             selectDays.insert(day)
         }
-        // 點選時有動畫
         tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 }

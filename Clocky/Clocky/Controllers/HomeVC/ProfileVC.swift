@@ -27,6 +27,7 @@ class ProfileVC: UIViewController {
                 }
             }
         }
+        view.backgroundColor = .black
     }
 
     @IBAction func signOutBtn() {
