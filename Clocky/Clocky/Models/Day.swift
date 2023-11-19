@@ -8,9 +8,10 @@
 import Foundation
 
 enum Day: Int, Codable, CaseIterable {
-    case Mon = 0, Tue, Wed, Thu, Fri, Sat, Sun
+    case  Mon, Tue, Wed, Thu, Fri, Sat, Sun
 
-    var dayString: String {
+         var dayString: String
+    {
         switch self {
             case .Mon: return "Every Monday"
             case .Tue: return "Every Tuesday"
@@ -36,13 +37,14 @@ enum Day: Int, Codable, CaseIterable {
 
     var componentWeekday: Int {
         switch self {
-            case .Mon: return 1
-            case .Tue: return 2
-            case .Wed: return 3
-            case .Thu: return 4
-            case .Fri: return 5
-            case .Sat: return 6
-            case .Sun: return 7
+            case .Sun: return 1
+            case .Mon: return 2
+            case .Tue: return 3
+            case .Wed: return 4
+            case .Thu: return 5
+            case .Fri: return 6
+            case .Sat: return 7
+            
         }
     }
 }
