@@ -8,23 +8,39 @@
 import UIKit
 
 class TabBarController: UITabBarController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.setupTabbar()
     }
     
+    private func setupTabbar() {
+        let alarmNC = UINavigationController(rootViewController: AlarmVC())
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let profileVC = storyboard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileVC
+       
+        let profileNC = UINavigationController(rootViewController: profileVC)
 
-    /*
-    // MARK: - Navigation
+        alarmNC.tabBarItem.image = UIImage(systemName: "alarm.fill")
+        profileNC.tabBarItem.image = UIImage(systemName: "person.crop.circle.fill")
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        alarmNC.title = "Alarm"
+        profileNC.title = "Profile"
+        
+        self.tabBar.barTintColor = .clear
+        self.tabBar.tintColor = .orange
+        
+        setViewControllers([alarmNC, profileNC], animated: false)
+       
+        alarmNC.navigationBar.largeTitleTextAttributes =
+            [NSAttributedString.Key.foregroundColor: UIColor.white,
+             .font: UIFont.boldSystemFont(ofSize: 34)]
+        
+        profileNC.navigationBar.largeTitleTextAttributes =
+            [NSAttributedString.Key.foregroundColor: UIColor.white,
+             .font: UIFont.boldSystemFont(ofSize: 34)]
+  
     }
-    */
+    
     deinit {
         print("deinit TabBarVC")
     }
