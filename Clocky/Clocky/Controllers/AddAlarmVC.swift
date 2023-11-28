@@ -59,7 +59,6 @@ class AddAlarmViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .secondarySystemGroupedBackground
- 
         overrideUserInterfaceStyle = .dark
         setupUI()
         setupNavigation()
