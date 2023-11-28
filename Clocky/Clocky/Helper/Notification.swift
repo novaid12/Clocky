@@ -23,6 +23,7 @@ class UserNotification{
         content.categoryIdentifier = "alarm"
         content.sound = UNNotificationSound(named: UNNotificationSoundName("bell.mp3"))
         
+        
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: alarm.date)
         let minute = calendar.component(.minute, from: alarm.date)

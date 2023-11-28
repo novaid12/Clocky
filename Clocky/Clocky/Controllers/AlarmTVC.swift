@@ -47,7 +47,8 @@ class AlarmVC: UIViewController {
         alarmTableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        alarmTableView.backgroundColor = .black
+        alarmTableView.backgroundColor = .secondarySystemGroupedBackground
+        overrideUserInterfaceStyle = .dark
     }
 
     // MARK: - setup Navegation

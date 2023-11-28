@@ -27,20 +27,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
-            let navigationController = UINavigationController(rootViewController: initialViewController)
-            
-            self.navigationController = navigationController
-            window.rootViewController = navigationController
+            window.rootViewController = initialViewController
             
             
         } else {
             let storyboard = UIStoryboard(name: "WelcomeStoryboard", bundle: nil)
             
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "WelcomeVC")
-            let navigationController = UINavigationController(rootViewController: initialViewController)
-            
-            self.navigationController = navigationController
-            window.rootViewController = navigationController
+            window.rootViewController = initialViewController
         }
         window.makeKeyAndVisible()
         self.window = window

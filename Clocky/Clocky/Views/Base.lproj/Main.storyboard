@@ -68,7 +68,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle.fill" catalog="system" id="t5C-9I-Ldd"/>
-                    <navigationItem key="navigationItem" title="Profile" id="crh-Zg-YqY"/>
+                    <navigationItem key="navigationItem" id="crh-Zg-YqY"/>
                     <connections>
                         <outlet property="country" destination="gd9-bk-rky" id="VCd-1a-lme"/>
                         <outlet property="email" destination="es8-zM-kYl" id="uhJ-XB-85x"/>
