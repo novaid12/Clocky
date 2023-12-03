@@ -59,7 +59,6 @@ class AddAlarmViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .secondarySystemGroupedBackground
- 
         overrideUserInterfaceStyle = .dark
         setupUI()
         setupNavigation()
@@ -180,14 +179,15 @@ protocol UpdateRepeatLabelDelegate: AnyObject {
 
 extension AddAlarmViewController {
     enum ContentItem {
-        case days(String), label(String), sounds(String), snooze(Bool)
+        case days(String), label(String), sounds(String) , snooze(Bool)
         
         var title: String {
             switch self {
             case .label: return "Label"
             case .sounds: return "Sounds"
-            case .snooze: return "Snooze"
+                            case .snooze: return "Snooze"
             case .days: return "Days"
+                
             }
         }
     }

@@ -27,7 +27,8 @@ class ProfileVC: UIViewController {
                 }
             }
         }
-        view.backgroundColor = .black
+        view.backgroundColor = .secondarySystemGroupedBackground
+        overrideUserInterfaceStyle = .dark
     }
 
     @IBAction func signOutBtn() {

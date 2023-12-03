@@ -20,19 +20,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
-            let navigationController = UINavigationController(rootViewController: initialViewController)
-            
-            self.navigationController = navigationController
-            window.rootViewController = navigationController
+            window.rootViewController = initialViewController
         }
         else {
             let storyboard = UIStoryboard(name: "WelcomeStoryboard", bundle: nil)
 
             guard let initialViewController = storyboard.instantiateInitialViewController() else { return }
-            let navigationController = UINavigationController(rootViewController: initialViewController)
-
-            self.navigationController = navigationController
-            window.rootViewController = navigationController
+            window.rootViewController = initialViewController
         }
         window.makeKeyAndVisible()
         self.window = window

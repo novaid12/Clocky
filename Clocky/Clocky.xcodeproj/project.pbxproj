@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		980B0F2D2B1B406200445E21 /* 029.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 980B0F2C2B1B406200445E21 /* 029.mp3 */; };
+		980B0F2F2B1B416B00445E21 /* DelicateWeapon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 980B0F2E2B1B416B00445E21 /* DelicateWeapon.mp3 */; };
+		980B0F312B1B4D6700445E21 /* JustPretend.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 980B0F302B1B4D6700445E21 /* JustPretend.mp3 */; };
 		9826CF162B026C52003942C8 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9826CF152B026C52003942C8 /* AlamofireImage */; };
+		982A67BC2B1C867800AF57EA /* MusicTrimmedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982A67BB2B1C867800AF57EA /* MusicTrimmedService.swift */; };
+		982A67BE2B1C86C700AF57EA /* FileManagerExtencion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982A67BD2B1C86C700AF57EA /* FileManagerExtencion.swift */; };
 		9873C3662AEFCB9100E776E2 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873C3652AEFCB9100E776E2 /* AuthManager.swift */; };
 		9873C3692AEFCD7B00E776E2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873C3682AEFCD7B00E776E2 /* TabBarController.swift */; };
 		9873C36C2AEFCDB000E776E2 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873C36B2AEFCDB000E776E2 /* WelcomeVC.swift */; };
@@ -17,7 +22,6 @@
 		9873C3762AEFEBCF00E776E2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9873C3752AEFEBCF00E776E2 /* Alamofire */; };
 		9873C3792AEFF6E600E776E2 /* AuthResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873C3782AEFF6E600E776E2 /* AuthResponce.swift */; };
 		98A706C82B08CC390007CF4A /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98A706C62B08CC380007CF4A /* bell.mp3 */; };
-		98A706C92B08CC390007CF4A /* tickle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98A706C72B08CC390007CF4A /* tickle.mp3 */; };
 		98A706CC2B08E1BF0007CF4A /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A706CB2B08E1BF0007CF4A /* Notification.swift */; };
 		98A706CF2B08E1E90007CF4A /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A706CE2B08E1E90007CF4A /* DateExtension.swift */; };
 		98A706D12B08E1FE0007CF4A /* AlarmInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A706D02B08E1FE0007CF4A /* AlarmInfo.swift */; };
@@ -44,6 +48,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		980B0F2C2B1B406200445E21 /* 029.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 029.mp3; path = Clocky/029.mp3; sourceTree = "<group>"; };
+		980B0F2E2B1B416B00445E21 /* DelicateWeapon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DelicateWeapon.mp3; sourceTree = "<group>"; };
+		980B0F302B1B4D6700445E21 /* JustPretend.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = JustPretend.mp3; sourceTree = "<group>"; };
+		982A67BB2B1C867800AF57EA /* MusicTrimmedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTrimmedService.swift; sourceTree = "<group>"; };
+		982A67BD2B1C86C700AF57EA /* FileManagerExtencion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExtencion.swift; sourceTree = "<group>"; };
+		98327CD82B1BA34F00B21E90 /* DelicateWeapon1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = DelicateWeapon1.m4a; path = Clocky/DelicateWeapon1.m4a; sourceTree = "<group>"; };
 		9873C3652AEFCB9100E776E2 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		9873C3682AEFCD7B00E776E2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		9873C36B2AEFCDB000E776E2 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
@@ -52,7 +62,6 @@
 		9873C3712AEFCF5C00E776E2 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		9873C3782AEFF6E600E776E2 /* AuthResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponce.swift; sourceTree = "<group>"; };
 		98A706C62B08CC380007CF4A /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bell.mp3; path = Clocky/bell.mp3; sourceTree = "<group>"; };
-		98A706C72B08CC390007CF4A /* tickle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tickle.mp3; path = Clocky/tickle.mp3; sourceTree = "<group>"; };
 		98A706CB2B08E1BF0007CF4A /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		98A706CE2B08E1E90007CF4A /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		98A706D02B08E1FE0007CF4A /* AlarmInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmInfo.swift; sourceTree = "<group>"; };
@@ -93,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		982A67BA2B1C866100AF57EA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				982A67BB2B1C867800AF57EA /* MusicTrimmedService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		9873C35F2AEFCACE00E776E2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				98A706CE2B08E1E90007CF4A /* DateExtension.swift */,
+				982A67BD2B1C86C700AF57EA /* FileManagerExtencion.swift */,
 			);
 			path = Extencions;
 			sourceTree = "<group>";
@@ -198,7 +216,10 @@
 			children = (
 				98FAA5FF2AE92D7600AEC16C /* Clocky */,
 				98A706C62B08CC380007CF4A /* bell.mp3 */,
-				98A706C72B08CC390007CF4A /* tickle.mp3 */,
+				980B0F302B1B4D6700445E21 /* JustPretend.mp3 */,
+				98327CD82B1BA34F00B21E90 /* DelicateWeapon1.m4a */,
+				980B0F2E2B1B416B00445E21 /* DelicateWeapon.mp3 */,
+				980B0F2C2B1B406200445E21 /* 029.mp3 */,
 				98FAA5FE2AE92D7600AEC16C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -214,6 +235,7 @@
 		98FAA5FF2AE92D7600AEC16C /* Clocky */ = {
 			isa = PBXGroup;
 			children = (
+				982A67BA2B1C866100AF57EA /* Services */,
 				98A706CD2B08E1D70007CF4A /* Extencions */,
 				98A706CA2B08E1AC0007CF4A /* Helper */,
 				9873C3772AEFF6DA00E776E2 /* Models */,
@@ -304,11 +326,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				980B0F2D2B1B406200445E21 /* 029.mp3 in Resources */,
 				9873C36E2AEFCDCF00E776E2 /* WelcomeStoryboard.storyboard in Resources */,
 				9873C3702AEFCF4900E776E2 /* AuthStoryboard.storyboard in Resources */,
-				98A706C92B08CC390007CF4A /* tickle.mp3 in Resources */,
 				98FAA6102AE92D7800AEC16C /* LaunchScreen.storyboard in Resources */,
 				98FAA60D2AE92D7800AEC16C /* Assets.xcassets in Resources */,
+				980B0F312B1B4D6700445E21 /* JustPretend.mp3 in Resources */,
+				980B0F2F2B1B416B00445E21 /* DelicateWeapon.mp3 in Resources */,
 				98FAA6082AE92D7600AEC16C /* Main.storyboard in Resources */,
 				98A706C82B08CC390007CF4A /* bell.mp3 in Resources */,
 			);
@@ -328,11 +352,13 @@
 				98A706D52B08E2260007CF4A /* Day.swift in Sources */,
 				98FAA6012AE92D7600AEC16C /* AppDelegate.swift in Sources */,
 				98DC46962B0908FB009B7580 /* AlarmTVC.swift in Sources */,
+				982A67BE2B1C86C700AF57EA /* FileManagerExtencion.swift in Sources */,
 				98A706D12B08E1FE0007CF4A /* AlarmInfo.swift in Sources */,
 				9873C36C2AEFCDB000E776E2 /* WelcomeVC.swift in Sources */,
 				9873C3722AEFCF5C00E776E2 /* AuthVC.swift in Sources */,
 				98A706E72B08E4160007CF4A /* RepeatAlarmVC.swift in Sources */,
 				98A706CF2B08E1E90007CF4A /* DateExtension.swift in Sources */,
+				982A67BC2B1C867800AF57EA /* MusicTrimmedService.swift in Sources */,
 				9873C3692AEFCD7B00E776E2 /* TabBarController.swift in Sources */,
 				98A706E52B08E3D90007CF4A /* AlarmLabelVC.swift in Sources */,
 				9873C3792AEFF6E600E776E2 /* AuthResponce.swift in Sources */,
