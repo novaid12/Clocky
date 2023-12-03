@@ -3,10 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key></key>
-	<string>com.myApp.Clocky://</string>
+	<string></string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string></string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>location</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

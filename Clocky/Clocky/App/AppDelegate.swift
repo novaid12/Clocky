@@ -5,21 +5,20 @@
 //  Created by  NovA on 25.10.23.
 //
 
-import UIKit
-import Foundation
 import AudioToolbox
 import AVFoundation
+import Foundation
+import UIKit
 import UserNotifications
 
-
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     var window: UIWindow?
     var navigationController: UINavigationController?
     private var audioPlayer: AVAudioPlayer?
 
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//        UNUserNotificationCenter.current().delegate = self
         let window = UIWindow(frame: UIScreen.main.bounds)
         
         if AuthManager.shared.isSignedIn {
@@ -28,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
             window.rootViewController = initialViewController
-            
             
         } else {
             let storyboard = UIStoryboard(name: "WelcomeStoryboard", bundle: nil)
@@ -41,18 +39,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let current = UNUserNotificationCenter.current()
         current.delegate = self
-        current.requestAuthorization(options: [.badge, .alert, .sound], completionHandler: { granted, error in
+        current.requestAuthorization(options: [.badge, .criticalAlert, .sound], completionHandler: { granted, _ in
             if granted {
                 print("yes")
-            }
-            else {
+            } else {
                 print("no")
             }
         })
         
         return true
     }
-    
+
     func switchToLoginScreen() {
         let window = UIWindow(frame: UIScreen.main.bounds)
         let storyboard = UIStoryboard(name: "WelcomeStoryboard", bundle: nil)
@@ -84,17 +81,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return false
     }
     
-    deinit {
-        print("deinit AppDelegate")
-    }
-}
-
-extension AppDelegate:UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.sound, .badge, .banner])
     }
-    
+
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         completionHandler()
+    }
+    
+    deinit {
+        print("deinit AppDelegate")
     }
 }
