@@ -5,6 +5,7 @@
 //  Created by  NovA on 18.11.23.
 //
 
+import AVFoundation
 import SnapKit
 import UIKit
 
@@ -35,6 +36,24 @@ class AlarmVC: UIViewController {
         setLayouts()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        ApiCaller.shared.getCurrentToken { token in
+            GetTrackService.getRecommendations(token: token) { result in
+                switch result {
+                case .success(let id):
+                    print(id)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+
+        guard let url = URL(string: "https://p.scdn.co/mp3-preview/81996834c2425f5d06f718b28b5c1a92480be3ee?cid=0b064e82d89949119cf54d3be4fea0b5") else { return }
+        let a = AVPlayer(url: url)
+        a.play()
+        print(a)
+    }
+
     // MARK: - setViews
 
     func setViews() {
@@ -62,7 +81,6 @@ class AlarmVC: UIViewController {
         navigationItem.rightBarButtonItem?.tintColor = .orange
         editButtonItem.tintColor = .orange
         navigationController?.navigationBar.barTintColor = .black
-
     }
 
     override func setEditing(_ editing: Bool, animated: Bool) {

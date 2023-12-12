@@ -20,7 +20,6 @@ class ProfileVC: UIViewController {
             ApiCaller.shared.getCurrentUserProfile(token: token) { [weak self] result in
                 switch result {
                 case .success(let model):
-                    print(model)
                     self?.setupUI(model: model)
                 case .failure(let error):
                     print(error)

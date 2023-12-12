@@ -13,6 +13,10 @@
 		9826CF162B026C52003942C8 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9826CF152B026C52003942C8 /* AlamofireImage */; };
 		982A67BC2B1C867800AF57EA /* MusicTrimmedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982A67BB2B1C867800AF57EA /* MusicTrimmedService.swift */; };
 		982A67BE2B1C86C700AF57EA /* FileManagerExtencion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982A67BD2B1C86C700AF57EA /* FileManagerExtencion.swift */; };
+		982A67C02B1C96CF00AF57EA /* AudioTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982A67BF2B1C96CF00AF57EA /* AudioTrack.swift */; };
+		984584C62B27386B00EEF214 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984584C52B27386B00EEF214 /* Artist.swift */; };
+		984584C82B27389900EEF214 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984584C72B27389900EEF214 /* Album.swift */; };
+		984584CA2B27390000EEF214 /* GetTrackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984584C92B27390000EEF214 /* GetTrackService.swift */; };
 		9873C3662AEFCB9100E776E2 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873C3652AEFCB9100E776E2 /* AuthManager.swift */; };
 		9873C3692AEFCD7B00E776E2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873C3682AEFCD7B00E776E2 /* TabBarController.swift */; };
 		9873C36C2AEFCDB000E776E2 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873C36B2AEFCDB000E776E2 /* WelcomeVC.swift */; };
@@ -36,6 +40,7 @@
 		98A706E72B08E4160007CF4A /* RepeatAlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A706E62B08E4160007CF4A /* RepeatAlarmVC.swift */; };
 		98A706E92B08E4420007CF4A /* SoundsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A706E82B08E4420007CF4A /* SoundsVC.swift */; };
 		98A706EC2B08E4E10007CF4A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 98A706EB2B08E4E10007CF4A /* SnapKit */; };
+		98AD9A062B287C63009BDDAE /* RecommendationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AD9A052B287C63009BDDAE /* RecommendationModel.swift */; };
 		98DC46962B0908FB009B7580 /* AlarmTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DC46952B0908FB009B7580 /* AlarmTVC.swift */; };
 		98F550302AFBB4BD00EC0E1B /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F5502F2AFBB4BC00EC0E1B /* ApiCaller.swift */; };
 		98F550322AFBB57100EC0E1B /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F550312AFBB57100EC0E1B /* UserProfile.swift */; };
@@ -53,7 +58,11 @@
 		980B0F302B1B4D6700445E21 /* JustPretend.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = JustPretend.mp3; sourceTree = "<group>"; };
 		982A67BB2B1C867800AF57EA /* MusicTrimmedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTrimmedService.swift; sourceTree = "<group>"; };
 		982A67BD2B1C86C700AF57EA /* FileManagerExtencion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExtencion.swift; sourceTree = "<group>"; };
+		982A67BF2B1C96CF00AF57EA /* AudioTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTrack.swift; sourceTree = "<group>"; };
 		98327CD82B1BA34F00B21E90 /* DelicateWeapon1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = DelicateWeapon1.m4a; path = Clocky/DelicateWeapon1.m4a; sourceTree = "<group>"; };
+		984584C52B27386B00EEF214 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		984584C72B27389900EEF214 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		984584C92B27390000EEF214 /* GetTrackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTrackService.swift; sourceTree = "<group>"; };
 		9873C3652AEFCB9100E776E2 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		9873C3682AEFCD7B00E776E2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		9873C36B2AEFCDB000E776E2 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
@@ -75,6 +84,7 @@
 		98A706E42B08E3D90007CF4A /* AlarmLabelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmLabelVC.swift; sourceTree = "<group>"; };
 		98A706E62B08E4160007CF4A /* RepeatAlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatAlarmVC.swift; sourceTree = "<group>"; };
 		98A706E82B08E4420007CF4A /* SoundsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsVC.swift; sourceTree = "<group>"; };
+		98AD9A052B287C63009BDDAE /* RecommendationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationModel.swift; sourceTree = "<group>"; };
 		98DC46952B0908FB009B7580 /* AlarmTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTVC.swift; sourceTree = "<group>"; };
 		98F5502F2AFBB4BC00EC0E1B /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 		98F550312AFBB57100EC0E1B /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
@@ -106,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				982A67BB2B1C867800AF57EA /* MusicTrimmedService.swift */,
+				984584C92B27390000EEF214 /* GetTrackService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -190,6 +201,10 @@
 				98A706D02B08E1FE0007CF4A /* AlarmInfo.swift */,
 				98A706D22B08E2110007CF4A /* AlarmStore.swift */,
 				98A706D42B08E2260007CF4A /* Day.swift */,
+				982A67BF2B1C96CF00AF57EA /* AudioTrack.swift */,
+				984584C52B27386B00EEF214 /* Artist.swift */,
+				984584C72B27389900EEF214 /* Album.swift */,
+				98AD9A052B287C63009BDDAE /* RecommendationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -345,12 +360,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				984584CA2B27390000EEF214 /* GetTrackService.swift in Sources */,
 				98A706E92B08E4420007CF4A /* SoundsVC.swift in Sources */,
+				98AD9A062B287C63009BDDAE /* RecommendationModel.swift in Sources */,
 				98A706DF2B08E2ED0007CF4A /* AddAlarmButtonTableViewCell.swift in Sources */,
+				984584C82B27389900EEF214 /* Album.swift in Sources */,
 				9873C3662AEFCB9100E776E2 /* AuthManager.swift in Sources */,
 				98F550322AFBB57100EC0E1B /* UserProfile.swift in Sources */,
 				98A706D52B08E2260007CF4A /* Day.swift in Sources */,
 				98FAA6012AE92D7600AEC16C /* AppDelegate.swift in Sources */,
+				984584C62B27386B00EEF214 /* Artist.swift in Sources */,
 				98DC46962B0908FB009B7580 /* AlarmTVC.swift in Sources */,
 				982A67BE2B1C86C700AF57EA /* FileManagerExtencion.swift in Sources */,
 				98A706D12B08E1FE0007CF4A /* AlarmInfo.swift in Sources */,
@@ -362,6 +381,7 @@
 				9873C3692AEFCD7B00E776E2 /* TabBarController.swift in Sources */,
 				98A706E52B08E3D90007CF4A /* AlarmLabelVC.swift in Sources */,
 				9873C3792AEFF6E600E776E2 /* AuthResponce.swift in Sources */,
+				982A67C02B1C96CF00AF57EA /* AudioTrack.swift in Sources */,
 				98A706E32B08E3AE0007CF4A /* AddAlarmVC.swift in Sources */,
 				98A706DD2B08E2CB0007CF4A /* AddAlarmTVC.swift in Sources */,
 				98A706CC2B08E1BF0007CF4A /* Notification.swift in Sources */,
